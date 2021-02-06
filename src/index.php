@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <!-- http://localhost/src/index.php?name=hoho -->
-        Hello <?php echo $_GET['name']?> 님.
-    </body>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>WEB</h1>
+<ol>
+    <li><a href="index.php?id=HTML">HTML</a></li>
+    <li><a href="index.php?id=CSS">CSS</a></li>
+    <li><a href="index.php?id=JavaScript">JavaScript</a></li>
+</ol>
+<h2>
+    <?php
+        echo $_GET['id'];
+    ?>
+</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, aut autem corporis debitis enim, harum id magnam minima nihil quas suscipit veniam? Autem consectetur nemo quam recusandae totam? Consequatur, itaque.
+</body>
 </html>
+
+
