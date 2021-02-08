@@ -45,7 +45,7 @@
         <a href="update.php?id=<?php echo $_GET['id']; ?>">update</a>
         <!-- ?php echo $_GET['id']; ? 는 ?=$_GET['id']? 로 작성할 수 있음.-->
     <?php } ?>
-    
+
     <h2>
         <?php
             print_title();
@@ -54,6 +54,13 @@
     <?php
         print_description();
     ?>
+    
+    <form action="update_process.php" method="post">
+        <input type="hidden" name="old_title" value="<?=$_GET['id']?>">
+        <p><input type="text" name="title" placeholder="Title" value="<?php print_title(); ?>"></p>
+        <p><textarea name="description"><?php print_description(); ?></textarea></p>
+        <input type="submit">
+    </form>
 </body>
 </html>
 
