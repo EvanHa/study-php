@@ -44,7 +44,10 @@
     <?php if(isset($_GET['id'])) { ?>
         <a href="update.php?id=<?php echo $_GET['id']; ?>">update</a>
         <!-- ?php echo $_GET['id']; ? 는 ?=$_GET['id']? 로 작성할 수 있음.-->
-        <a href="delete_process.php?id=<?=$_GET[id]?>">delete</a>
+        <form action="delete_process.php" method="post">
+            <input type="hidden" name="id" value="<?=$_GET['id']?>">
+            <input type="submit" value="delete">
+        </form>
     <?php } ?>
     
     <h2>
